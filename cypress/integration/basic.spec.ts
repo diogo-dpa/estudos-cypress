@@ -14,6 +14,11 @@ describe('Cypress basics', () => {
         cy.title()
         .should('be.equal', 'Campo de Treinamento')
         .and('contain', 'Campo')
+
+        // uso de função assincrona
+        cy.title().then(title => {
+            console.log(title)
+        })
     })
     
     it('should find and interact with an element', () => {

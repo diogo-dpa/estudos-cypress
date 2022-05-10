@@ -100,7 +100,7 @@ describe('Work with basic elements', () => {
             .should('have.value', '1graucomp')
     })
 
-    it.only('Combo múltiplo', () => {
+    it('Combo múltiplo', () => {
 
         // seleciona pelos values
         cy.get('[data-testid=dataEsportes]')
