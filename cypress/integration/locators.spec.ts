@@ -21,6 +21,7 @@ describe('Work with Locators', () => {
     })
 
     it('Using xpath', () => {
-        cy.xpath('//input')
+        cy.xpath("//input[contains(@onclick, 'Francisco')]")
+        cy.xpath("//table[@id='tabelaUsuarios']//td[contains(., 'Francisco')]/..//input[@type='text']")
     })
 })
