@@ -10,13 +10,16 @@ describe('Work with alerts', () => {
         cy.reload()
     })
 
-    it('Alert', () => {
-        cy.get('#alert').click()
+    it.only('Alert', () => {
+        // cy.get('#alert').click()
 
-        // cy.on pega eventos ocorridos por meio da tela
-        cy.on('window:alert', msg => {
-            expect(msg).to.be.equal('Alert Simples')
-        })
+        // // cy.on pega eventos ocorridos por meio da tela
+        // cy.on('window:alert', msg => {
+        //     expect(msg).to.be.equal('Alert Simples')
+        // })
+
+        // Os códigos acima foram substituidos pelo comando abaixo 
+        cy.clickAlert('#alert', 'Alert Simples')
     })
 
     it('Alert com mock', () => {
@@ -84,7 +87,7 @@ describe('Work with alerts', () => {
         cy.get('#prompt').click()
     })
 
-    it.only('Validando mensagens', () => {
+    it('Validando mensagens', () => {
         const stub = cy.stub().as('alerta')
         cy.on('window:alert', stub)
         cy.get('#formCadastrar').click()

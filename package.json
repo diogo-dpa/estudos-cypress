@@ -20,5 +20,8 @@
   "homepage": "https://github.com/diogo-dpa/estudos-cypress#readme",
   "dependencies": {
     "cypress": "^3.6.0"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^1.6.2"
   }
 }

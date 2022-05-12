@@ -16,5 +16,14 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+// Adicionando o plugin de xpath
+require('cypress-xpath')
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+// Redefine as prioridades dos selectors
+// Cypress.SelectorPlayground.defaults({
+//     selectorPriority: ['id', 'class', 'attributes']
+// })
