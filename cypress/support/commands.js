@@ -32,3 +32,11 @@ Cypress.Commands.add('clickAlert', (locator, message) => {
         expect(msg).to.be.equal(message)
     })
 })
+
+Cypress.Commands.add('login', () => {
+    cy.get('.input-group > .form-control').type('teste123@email.com')
+    cy.get(':nth-child(2) > .form-control').type('123456')
+    cy.get('.btn').click()
+
+    cy.get('.toast-message').should('contain', 'Bem vindo')
+})
